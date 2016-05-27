@@ -22,7 +22,8 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 9082
+  config.vm.network "forwarded_port", guest: 3306, host: 9382
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -36,7 +37,7 @@ Vagrant.configure(2) do |config|
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.  
+  # argument is a set of non-required options.
   config.vm.synced_folder "../magento2", "/var/www/magento2", :mount_options => ["dmode=777","fmode=666"]
 
   # Provider-specific configuration so you can fine-tune various
@@ -46,12 +47,12 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     #vb.gui = true
-  
+
     # OS + MySQL + Apache
     vb.memory = 2048
     vb.cpus = 2
   end
-  
+
   # View the documentation for the provider you are using for more
   # information on available options.
 

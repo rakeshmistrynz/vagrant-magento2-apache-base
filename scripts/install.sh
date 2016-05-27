@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
+# php 5.6
+sudo add-apt-repository ppa:ondrej/php5-5.6
+
 sudo apt-get update
+
+sudo apt-get install -y python-software-properties
 
 # Install MySQL
 
