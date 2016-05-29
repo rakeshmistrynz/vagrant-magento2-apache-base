@@ -21,7 +21,7 @@ For example:
 
     cd myprojects
     git clone https://github.com/magento/magento2.git
-    git clone https://github.com/alankent/vagrant-magento2-apache-base.git
+    git clone https://github.com/indynagpal/vagrant-magento2-apache-base.git
 
 The Vagrantfile mounts ../magento2 under /var/www/magento2.
 
